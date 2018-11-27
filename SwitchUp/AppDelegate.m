@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <FeedMedia/FeedMedia.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [FMAudioPlayer setClientToken:@"baaad63da53031612e362694f84a9b7d4c1dfc3e" secret:@"764542a39e639ab2c990ccd1c91cd12a51d5ad4a"];
+
+    
     return YES;
 }
 

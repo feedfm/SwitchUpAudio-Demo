@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/arv/Documents/SwitchUp2/SwitchUp/SwitchUp/Main.storyboard">
+   </FileRef>
+   <FileRef
       location = "self:SwitchUp.xcodeproj">
    </FileRef>
 </Workspace>

@@ -1,0 +1,26 @@
+PODS:
+  - FeedMedia (4.2.0):
+    - MarqueeLabel (~> 3.1.4)
+  - MarqueeLabel (3.1.6):
+    - MarqueeLabel/ObjC (= 3.1.6)
+  - MarqueeLabel/ObjC (3.1.6)
+  - UICircularProgressRing (4.1.0)
+
+DEPENDENCIES:
+  - FeedMedia
+  - UICircularProgressRing
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FeedMedia
+    - MarqueeLabel
+    - UICircularProgressRing
+
+SPEC CHECKSUMS:
+  FeedMedia: 86566a8117f6af8be5822dd8f2f52b58129eac01
+  MarqueeLabel: 0c41f08ef5773e29c0f71064a8fa788a2fd8b365
+  UICircularProgressRing: 5a32c01f54474571b1e66e8fa050c0f83d6d981b
+
+PODFILE CHECKSUM: 61107155bbbfd74b24f849691ef1ea5ff890ac83
+
+COCOAPODS: 1.5.3

@@ -1,0 +1,6 @@
+framework module Pods_SwitchUp {
+  umbrella header "Pods-SwitchUp-umbrella.h"
+
+  export *
+  module * { export * }
+}
