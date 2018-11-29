@@ -65,8 +65,7 @@ float outOfPhase2Transition =  1780.0;
     
     NSString *workout = @"Spin_30_min";
     NSNumber *lowVolume = @0.2f;
-    NSNumber *mediumVolume = @0.4f;
-    //NSNumber *highVolume = @0.8f;
+    NSNumber *mediumVolume = @0.3f;
     NSArray *cuePoints = @[
                            // Welcome to the Feed.fm SwitchUp demo app. This app
                            // will demo how to use the Feed.fm SDK to integrate
@@ -174,7 +173,9 @@ float outOfPhase2Transition =  1780.0;
         CMTime interval = CMTimeMakeWithSeconds(outOfPhase1Transition, NSEC_PER_SEC);
         [_workoutPlayer seekToTime:interval];
         [self.workoutLabel setText:Phase2Label];
+        [self.phaseIndicator setCurrentPage:1];
         [self.workoutDescription setText:Phase2Description];
+        //[self.phaseIndicator ]
         
     }
     else if (seconds < outOfPhase2Transition){
@@ -182,6 +183,7 @@ float outOfPhase2Transition =  1780.0;
         CMTime interval = CMTimeMakeWithSeconds(outOfPhase2Transition, NSEC_PER_SEC);
         [_workoutPlayer seekToTime:interval];
         [self.workoutLabel setText:Phase3Label];
+        [self.phaseIndicator setCurrentPage:2];
         [self.workoutDescription setText:Phase3Description];
     }
    
@@ -195,6 +197,7 @@ float outOfPhase2Transition =  1780.0;
         CMTime interval = CMTimeMakeWithSeconds(outOfPhase1Transition, NSEC_PER_SEC);
         [_workoutPlayer seekToTime:interval];
         [self.workoutLabel setText:Phase2Label];
+        [self.phaseIndicator setCurrentPage:1];
         [self.workoutDescription setText:Phase2Description];
     }
     else if(seconds > outOfPhase1Transition) {
@@ -202,6 +205,7 @@ float outOfPhase2Transition =  1780.0;
         CMTime interval = CMTimeMakeWithSeconds(0.0, NSEC_PER_SEC);
         [_workoutPlayer seekToTime:interval];
         [self.workoutLabel setText:Phase1Label];
+        [self.phaseIndicator setCurrentPage:0];
         [self.workoutDescription setText:Phase1Description];
     }
 }
@@ -260,22 +264,25 @@ float outOfPhase2Transition =  1780.0;
         // Phase 1
         [self.workoutLabel setText:Phase1Label];
         [self.workoutDescription setText:Phase1Description];
+        [self.phaseIndicator setCurrentPage:0];
     }
     else if (seconds > outOfPhase2Transition){
         // Phase 3
         [self.workoutLabel setText:Phase3Label];
         [self.workoutDescription setText:Phase3Description];
+        [self.phaseIndicator setCurrentPage:2];
     }
     else {
         // Phase 2
         [self.workoutLabel setText:Phase2Label];
         [self.workoutDescription setText:Phase2Description];
+        [self.phaseIndicator setCurrentPage:1];
         
     }
     self.progressRing.minValue = 0;
     self.progressRing.maxValue = (float) CMTimeGetSeconds(_playerItem.duration);
     self.progressRing.value = seconds;
-    NSLog(@"workout audio elapsed to %f, Music volume is %f", seconds, _musicPlayer.mixVolume);
+    // NSLog(@"workout audio elapsed to %f, Music volume is %f", seconds, _musicPlayer.mixVolume);
     
     if (_musicPlayer.playbackState != FMAudioPlayerPlaybackStateUnavailable) {
         [_stationCrossfader elapseToTime:seconds];

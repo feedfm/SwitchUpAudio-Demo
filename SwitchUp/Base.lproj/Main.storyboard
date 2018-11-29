@@ -20,7 +20,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKw-Dk-TEk">
                                 <rect key="frame" x="0.0" y="20" width="414" height="578"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="efg-3l-NZM">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="efg-3l-NZM">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="578"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
@@ -316,6 +316,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="433" height="288"/>
         <image name="Pause" width="30" height="30"/>
         <image name="PhaseBack" width="30" height="30"/>
         <image name="PhaseNext" width="30" height="30"/>
