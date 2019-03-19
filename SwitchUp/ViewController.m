@@ -72,13 +72,13 @@ float outOfPhase2Transition =  1780.0;
                            // music into your app. Let's go with a
                            // relatively slow BPM station for the first 60 seconds.
                            @0.0f, lowVolume,
-                           @7.0f, @{ @"bpm" : @"slow" },
-                           @18.0f, mediumVolume,
+                           @0.0f, @{ @"bpm" : @"slow" },
+                           @7.0f, mediumVolume,
                            
                            
                           
                            // Now let's speed up to a medium BPM for 20 seconds
-                           @180.0f, lowVolume,
+                          
                            @200.0f, mediumVolume,
                            @199.0f, @{ @"bpm" : @"fast" },
                            
